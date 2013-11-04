@@ -1,0 +1,87 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "twitter/bootstrap";
+
+body {
+background: url("http://davidbradley.me/_incacorp/atlas_cloud/_assets/img/bg.jpg") repeat;
+font-family: 'Droid Sans', sans-serif;
+}
+.price-bg, .blue-bg {
+background-color: rgba(73, 82, 94, 0.20);
+background: rgba(73, 82, 94, 0.20);
+color: rgba(73, 82, 94, 0.20);
+-webkit-box-shadow: 0 0 0 4px rgba(0,0,0,0.1);
+box-shadow: 0 0 0 4px rgba(0,0,0,0.1);
+-webkit-border-radius: 3px;
+border-radius: 3px;
+padding: 20px;
+}
+.wantfreething{
+	background-image: image-url("wantfreething.png");
+	width: 500px;
+	height: 74px;
+	margin: 5px 0px 0px 215px;
+}
+
+.red {
+color: #d5585a;
+}
+.price-bg h2 {
+color: #FFF;
+}
+.avatar {
+border: 6px solid #818181;
+box-shadow: 6px 4px 0 #CCCCCC;
+overflow: hidden;
+position: relative;
+}
+ .avatar {
+ 	width: 200px;
+border-radius: 500px;
+-webkit-border-radius: 500px;
+}
+.team-item {
+margin-bottom: 20px;
+-webkit-transition: all 200ms ease;
+-moz-transition: all 200ms ease;
+-ms-transition: all 200ms ease;
+-o-transition: all 200ms ease;
+transition: all 200ms ease;
+}
+.team-item {
+border-radius: 500px;
+-webkit-border-radius: 500px;
+}
+team-item .info-holder {
+text-align: center;
+padding: 10px;
+}
+.position {
+margin-top: 10px;
+display: block;
+font-size: 25px;
+text-transform: capitalize;
+margin-bottom: 3px;
+position: relative;
+color: #d5585a;
+}
+.desc {
+display: inline-block;
+color: #d5585a;
+font-size: 15px;
+}
+.green-btn {
+	text-align: center;
+color: #FFF;
+text-shadow: 0 1px 0 #155145;
+background: #16a085;
+border-bottom: #1d3631;
+width: 100%;
+display: block;
+padding: 10px 0;
+-webkit-border-radius: 3px;
+border-radius: 3px;
+margin-top: 20px;
+font-weight: bold;
+}
