@@ -10,7 +10,7 @@
     					<div style="width: 100%;"><% @postsp.each do |upload| %>
       <table class="browse-show" style="width: 160px;">
         <tr>
-        <td ><%= link_to image_tag(upload.urlpic, :alt => upload.title, :title => upload.title, :style =>"height: 160px;width: 160px;"), upload,{:class => "img_user"}  %></td>
+        <td ><%= link_to image_tag(upload.urlpic, :alt => upload.title, :title => upload.title, :style =>"height: 160px;width: 160px;"), upload.url,{:class => "img_user"}  %></td>
         </tr>
         <tr class="showpageuploadrow">
         <td class="for-font"><%= link_to truncate( upload.title, :length => 25), upload.url %></td>
@@ -37,7 +37,7 @@
               <div style="width: 100%;"><% @postsd.each do |upload| %>
       <table class="browse-show" style="width: 160px;">
         <tr>
-        <td ><%= link_to image_tag(upload.urlpic, :alt => upload.title, :title => upload.title, :style =>"height: 160px;width: 160px;"), upload,{:class => "img_user"}  %></td>
+        <td ><%= link_to image_tag(upload.urlpic, :alt => upload.title, :title => upload.title, :style =>"height: 160px;width: 160px;"), upload.url,{:class => "img_user"}  %></td>
         </tr>
         <tr class="showpageuploadrow">
         <td class="for-font"><%= link_to truncate( upload.title, :length => 25), upload.url %></td>
@@ -61,7 +61,7 @@
               <div style="width: 100%;"><% @postscb.each do |upload| %>
       <table class="browse-show" style="width: 160px;">
         <tr>
-        <td ><%= link_to image_tag(upload.urlpic, :alt => upload.title, :title => upload.title, :style =>"height: 160px;width: 160px;"), upload,{:class => "img_user"}  %></td>
+        <td ><%= link_to image_tag(upload.urlpic, :alt => upload.title, :title => upload.title, :style =>"height: 160px;width: 160px;"), upload.url,{:class => "img_user"}  %></td>
         </tr>
         <tr class="showpageuploadrow">
         <td class="for-font"><%= link_to truncate( upload.title, :length => 25), upload.url %></td>
