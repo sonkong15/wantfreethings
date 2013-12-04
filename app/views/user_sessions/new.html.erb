@@ -1,0 +1,37 @@
+<div class="container">
+<div class="row">
+    			<div class="span8" style="margin: 100px 190px auto">
+    				<div class="signup-price-bg">
+    					<h2 style="text-align: center"><span class="red">Welcome back</span> <span class="white">login</span></h2>
+    					<%= form_for(@user_session,:as => :user_session, :url => { :action => "create" }, :html => { :class => 'form-horizontal' }) do |f| %>
+  <% if @user_session.errors.any? %>
+  <div id="error_explanation">
+    <h2 style="text-align: center;color: red;"><%= pluralize(@user_session.errors.count, "error") %> prohibited:</h2>
+    <ul>
+      <% @user_session.errors.full_messages.each do |msg| %>
+        <li style="text-align: center; color: red;"><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
+ <div class="control-group">
+ 	<div class="controls">
+  <%= f.label :Email, :class => "red signup-logout" %>
+  <%= f.text_field :email   %><br />
+  </div>
+</div>
+  <br />
+  <div class="control-group">
+ 	<div class="controls">
+  <%= f.label :password, :class => "red signup-logout" %>
+  <%= f.password_field :password %><br />
+</div>
+</div>
+  <br />
+  <%= f.submit "Login", :class =>"green-btn signup-logout", :style =>"margin-top: 0px; width: 100%" %>
+<% end %>
+<p class="white"> don't have an account sign up today <a href="<%= new_user_url%>"> Sign up </a></p>
+<p class="white"> did you forget your password <a href="#">forgot password</a></p>
+    				</div><!--price bg -->
+    			</div><!-- span3 -->
+            </div>

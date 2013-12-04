@@ -1,0 +1,51 @@
+<div class="container">
+<div class="row">
+    			<div class="span8" style="margin: 50px 190px auto">
+    				<div class="signup-price-bg">
+    					<h2><span class="red">Make money from twitter, facebook & blogs</span> <span class="white">Want know How?</span></h2>
+    					<p class="red">Meet (Ralph Spot ) we are a new company that does all the work to help you montises your twitter, facebook and blog FANS in to money. how it work( read features and compair chats also) you create a ( ben ) site and wants you are appoved you add content to your new site. then all you have to do is share   </p>
+    					<%= form_for(@user, :html => { :class => 'form-horizontal' }) do |f| %>
+  <% if @user.errors.any? %>
+  <div id="error_explanation">
+    <h2 style="text-align: center;color: red;"><%= pluralize(@user.errors.count, "error") %> prohibited:</h2>
+    <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li style="text-align: center; color: red;"><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
+  <div class="control-group">
+    <div class="controls">
+  <%= f.label :First_name, :class => "red signup-logout" %>
+  <%= f.text_field :first_name   %><br />
+  </div>
+</div>
+  <br />
+ <div class="control-group">
+    <div class="controls">
+  <%= f.label :Email, :class => "red signup-logout" %>
+  <%= f.text_field :email   %><br />
+  </div>
+</div>
+  <br />
+  <div class="control-group">
+    <div class="controls">
+  <%= f.label :password, :class => "red signup-logout" %>
+  <%= f.password_field :password %><br />
+</div>
+</div>
+  <br />
+  <div class="control-group">
+    <div class="controls">
+  <%= f.label :Password_confirmation, :class => "red signup-logout" %>
+  <%= f.password_field :password_confirmation   %><br />
+  </div>
+</div>
+  <br />
+  <%= f.submit "sign up", :class =>"green-btn signup-logout", :style =>"margin-top: 0px; width: 100%" %>
+<% end %>
+<p class="white"> already have an account login <a href="/login"> Login </a></p>
+    				</div><!--price bg -->
+    			</div><!-- span3 -->
+            </div>

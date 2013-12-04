@@ -17,15 +17,29 @@ group :assets do
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
-	gem 'anjlab-bootstrap-rails', '~> 2.2', :require => 'bootstrap-rails'
+	gem 'bootstrap-sass', '~> 2.3.2.1'
+	gem 'kaminari'
+	gem "aws-sdk", "~> 1.6.5"
+	gem "paperclip", "~> 3.0"
+	gem 'authlogic'
+	gem "cocaine", "0.3.2"
+	gem "cancan"
+	gem 'omniauth-facebook'
   gem 'uglifier', '>= 1.0.3'
 end
 
 gem 'jquery-rails'
  group :production do
- 	gem 'anjlab-bootstrap-rails', '~> 2.2', :require => 'bootstrap-rails'
+ 	gem 'bootstrap-sass', '~> 2.3.2.1'
  	gem 'thin'
  	gem "httparty", "~> 0.11.0"
+ 	gem 'kaminari'
+	gem "aws-sdk", "~> 1.6.5"
+	gem "paperclip", "~> 3.0"
+	gem 'authlogic'
+	gem "cocaine", "0.3.2"
+	gem "cancan"
+	gem 'omniauth-facebook'
  	end
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

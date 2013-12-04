@@ -1,0 +1,58 @@
+<div class="container">
+<div class="row">
+    			<div class="span8" style="margin: 50px 190px auto">
+    				<div class="signup-price-bg">
+    					<h2><span class="red">Make money, Get more traffic </span> <span class="white">Add Your post</span></h2>
+    					
+    					<%= form_for(@post, :html => { :class => 'form-horizontal' }) do |f| %>
+  <% if @post.errors.any? %>
+  <div id="error_explanation">
+    <h2 style="text-align: center;color: red;"><%= pluralize(@post.errors.count, "error") %> prohibited:</h2>
+    <ul>
+      <% @post.errors.full_messages.each do |msg| %>
+        <li style="text-align: center; color: red;"><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
+  <div class="control-group">
+    <div class="plus  ">
+  <%= f.label "Web page url:", :class => "red signup-logout" %>
+  <%= f.text_field :url, :class => "span5"  %><br />
+  </div>
+</div>
+  <br />
+ <div class="control-group">
+    <div class=" plus">
+  <%= f.label "Title", :class => "red signup-logout" %>
+  <%= f.text_field :title, :class => "span5" %><br />
+  </div>
+</div>
+  <br />
+  <div class="control-group">
+    <div class=" plus">
+  <%= f.label :Description, :class => "red signup-logout" %>
+  <%= f.text_area :body, :rows => "5", :class => "span5" %><br />
+</div>
+</div>
+  <br />
+  <div class="control-group">
+    <div class=" plus">
+  <%= f.label "Image url", :class => "red signup-logout" %>
+  <%= f.text_field :urlpic, :class => "span5"   %><br />
+  </div>
+</div>
+<br />
+  <div class="control-group">
+    <div class=" plus">
+  <%= f.label "website this post is from", :class => "red signup-logout" %>
+  <%= f.select :blog_id, current_user.blogs.all.collect {|x| [x.title, x.id]}, {} %><br />
+  </div>
+</div>
+  <br />
+  <%= f.submit :class =>"green-btn signup-logout", :style =>"margin-top: 0px; width: 100%" %>
+<% end %>
+
+    				</div><!--price bg -->
+    			</div><!-- span3 -->
+            </div>

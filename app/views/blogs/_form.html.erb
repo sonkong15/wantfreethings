@@ -1,0 +1,51 @@
+<div class="container">
+<div class="row">
+    			<div class="span8" style="margin: 50px 190px auto">
+    				<div class="signup-price-bg">
+    					<h2><span class="red">Make money, Get more traffic </span> <span class="white">Add Your Site</span></h2>
+    					
+    					<%= form_for(@blog, :html => { :class => 'form-horizontal' }) do |f| %>
+  <% if @blog.errors.any? %>
+  <div id="error_explanation">
+    <h2 style="text-align: center;color: red;"><%= pluralize(@blog.errors.count, "error") %> prohibited:</h2>
+    <ul>
+      <% @blog.errors.full_messages.each do |msg| %>
+        <li style="text-align: center; color: red;"><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
+  <div class="control-group">
+    <div class="plus  ">
+  <%= f.label "site name", :class => "red signup-logout" %>
+  <%= f.text_field :title, :class => "span5"  %><br />
+  </div>
+</div>
+  <br />
+ <div class="control-group">
+    <div class=" plus">
+  <%= f.label "site url:", :class => "red signup-logout" %>
+  <%= f.text_field :subdomain, :class => "span5" %><br />
+  </div>
+</div>
+  <br />
+  <div class="control-group">
+    <div class=" plus">
+  <%= f.label :Description, :class => "red signup-logout" %>
+  <%= f.text_area :about, :rows => "5", :class => "span5" %><br />
+</div>
+</div>
+  <br />
+  <div class="control-group">
+    <div class=" plus">
+  <%= f.label "Rss feed", :class => "red signup-logout" %>
+  <%= f.text_field :interest, :class => "span5"   %><br />
+  </div>
+</div>
+  <br />
+  <%= f.submit :class =>"green-btn signup-logout", :style =>"margin-top: 0px; width: 100%" %>
+<% end %>
+
+    				</div><!--price bg -->
+    			</div><!-- span3 -->
+            </div>
