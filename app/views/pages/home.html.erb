@@ -6,14 +6,14 @@
 <div class="row">
     			<div class=" col-md-8">
     				<div class="price-bg" style="width: 738px;margin: 0px auto;">
-    					<h2><span class="red">New Photos From</span> Pikcam? <span class="green"></span></h2>
+    					<h2><span class="red">New Photos From</span> RalphSpot <span class="green"></span></h2>
     					<div style="width: 100%;"><% @postsp.each do |upload| %>
       <table class="browse-show" style="width: 160px;">
         <tr>
-        <td ><%= link_to image_tag(upload.urlpic, :alt => upload.title, :title => upload.title, :style =>"height: 160px;width: 160px;"), upload.url,{:class => "img_user"}  %></td>
+        <td ><%= link_to image_tag(upload.urlpic, :alt => upload.title, :title => upload.title, :style =>"height: 160px;width: 160px;"), upload,{:class => "img_user"}  %></td>
         </tr>
         <tr class="showpageuploadrow">
-        <td class="for-font"><%= link_to truncate( upload.title, :length => 25), upload.url %></td>
+        <td class="for-font"><%= link_to truncate( upload.title, :length => 25), upload %></td>
       </tr>
       </table>
       <% end %> </div>
@@ -31,54 +31,7 @@
 
     				</div><!--price bg -->
     			</div><!-- span3 -->
-    			<div class=" col-md-8">
-            <div class="price-bg" style="width: 738px;margin: 0px auto;">
-              <h2><span class="red">New Photos from</span> Donloren? <span class="green"></span></h2>
-              <div style="width: 100%;"><% @postsd.each do |upload| %>
-      <table class="browse-show" style="width: 160px;">
-        <tr>
-        <td ><%= link_to image_tag(upload.urlpic, :alt => upload.title, :title => upload.title, :style =>"height: 160px;width: 160px;"), upload.url,{:class => "img_user"}  %></td>
-        </tr>
-        <tr class="showpageuploadrow">
-        <td class="for-font"><%= link_to truncate( upload.title, :length => 25), upload.url %></td>
-      </tr>
-      </table>
-      <% end %> </div>
-      <div style="clear: both"></div>
-            </div><!--price bg -->
-          </div><!-- span3 -->
-            <div class="col-md-4">
-            <div class="price-bg">
-              <h2><span class="red">what's</span> Hot<span class="green"></span></h2>
-              <script src="http://knowd.com/w/2312.js?swid=457"></script>
-
-
-            </div><!--price bg -->
-          </div><!-- span3 -->
-          <div class=" col-md-8">
-            <div class="price-bg">
-              <h2><span class="red">New Photos from</span> crusinbro? <span class="green"></span></h2>
-              <div style="width: 100%;"><% @postscb.each do |upload| %>
-      <table class="browse-show" style="width: 160px;">
-        <tr>
-        <td ><%= link_to image_tag(upload.urlpic, :alt => upload.title, :title => upload.title, :style =>"height: 160px;width: 160px;"), upload.url,{:class => "img_user"}  %></td>
-        </tr>
-        <tr class="showpageuploadrow">
-        <td class="for-font"><%= link_to truncate( upload.title, :length => 25), upload.url %></td>
-      </tr>
-      </table>
-      <% end %> </div>
-      <div style="clear: both"></div>
-            </div><!--price bg -->
-          </div><!-- span3 -->
-            <div class="col-md-4">
-            <div class="price-bg">
-              <h2><span class="red">16GB</span> ipad 3Gen for free - <span class="green"></span></h2>
-              
-
-
-            </div><!--price bg -->
-          </div><!-- span3 -->
+    			
         </div>
     		 </div>
     		
