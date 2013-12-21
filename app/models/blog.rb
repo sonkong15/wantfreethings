@@ -5,5 +5,5 @@ class Blog < ActiveRecord::Base
 
    validates :title, presence: true
    validates :about, length: { maximum: 500 }
-   validates :subdomain, presence: true, uniqueness: { case_sensitive: false}
+   #validates :subdomain, presence: true, uniqueness: { case_sensitive: false}
 end
